@@ -29,9 +29,8 @@ P
 
 ## OUPUT -RARP
 ![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/2a1a2d46-d16d-4d35-bc13-7fc77e481351)
+![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/424b3b3e-318d-48b4-87a6-bcfb62919b9d)
 
-Server
-![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/58632f4f-11fd-4f29-bfa9-45e77ccfd4b3)
 
 
 ## RESULT
