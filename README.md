@@ -63,8 +63,7 @@ REG NO:
 
 
 
-ALGORITHM FOR RARP
-
+ALGORITHM FOR RARP:
 CLIENT
 1.Start the program
 2.Using datagram sockets UDP function is established.
