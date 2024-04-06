@@ -62,7 +62,7 @@ REG NO:
 ![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/3d69a327-643e-4142-aa1f-e4d9dd5c1fd1)
 
 
-
+```
 ALGORITHM FOR RARP:
 CLIENT
 1.Start the program
@@ -77,6 +77,7 @@ SERVER
 2.Server maintains the table in which IP and corresponding MAC addresses are stored.
 3.Read the MAC address which is send by the client.
 4.Map the IP address with its MAC address and return the IP address to client.
+```
 
 
 
