@@ -17,19 +17,90 @@ stored.
 5. Map the IP address with its MAC address and return the MAC address to client.
 P
 ## PROGRAM - ARP
-![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/f203aea7-74c5-498b-a55f-8a39075b0636)
-![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/3ab7aff0-baa5-4eea-957f-b720463b31ed)
+
+
+
+CLIENT
+```
+
+import socket
+s=socket.socket()
+s.bind(('localhost',8000))
+s.listen(5)
+c,addr=s.accept()
+address={"165.165.80.80":"6A:08:AA:C2","165.165.79.1":"8A:BC:E3:FA"};
+while True:
+ ip=c.recv(1024).decode()
+ try:
+ c.send(address[ip].encode())
+ except KeyError:
+ c.send("Not Found".encode())
+```
+
+
+
+
+SERVER
+```
+
+import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+while True:
+REG NO:
+ ip=input("Enter logical Address : ")
+ s.send(ip.encode())
+ print("MAC Address",s.recv(1024).decode()
+```
+
+
+
 
 
 ## OUPUT - ARP
-![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/4376b900-68c9-4d14-82a5-aef27b3cdf47)
+![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/1eb2c48c-970b-4ee8-9a24-8779dbbefdee)
+![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/3d69a327-643e-4142-aa1f-e4d9dd5c1fd1)
+
+
 
 ## PROGRAM - RARP
-![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/cc45a485-b60d-481e-a2c7-fc85dd44094e)
+
+CLIENT
+```
+import socket 
+s=socket.socket() 
+s.bind(('localhost',9000)) 
+s.listen(5) 
+c,addr=s.accept() 
+address={"6A:08:AA:C2":"192.168.1.100","8A:BC:E3:FA":"192.168.1.99"}; 
+while True: 
+            ip=c.recv(1024).decode() 
+            try: 
+                c.send(address[ip].encode()) 
+            except KeyError: 
+                c.send("Not Found".encode())
+```
+SERVER
+
+```
+import socket 
+s=socket.socket() 
+s.connect(('localhost',9000)) 
+while True: 
+    ip=input("Enter MAC Address : ") 
+    s.send(ip.encode()) 
+    print("Logical Address",s.recv(1024).decode())
+```
+
+
+
+
 
 ## OUPUT -RARP
-![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/2a1a2d46-d16d-4d35-bc13-7fc77e481351)
-![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/424b3b3e-318d-48b4-87a6-bcfb62919b9d)
+![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/5f8bdf82-5e3a-406c-a573-1f0eeea02a6b)
+![image](https://github.com/Pooja-sri45/2c.ARP_RARP_PROTOCOLS/assets/147081893/0ffded47-9e92-461d-80af-3ae3712f2315)
+
+
 
 
 
